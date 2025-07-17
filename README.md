@@ -51,9 +51,11 @@ mvn spring-boot:run
 
 ###	API Usage:
 1. List Events (GET /api/events)
+```
 	curl --location 'http://localhost:8080/api/events?year=2025&sessionType=Race&country=Canada'
-
+```
 2. Place a Bet (POST /api/bets)
+```
 	curl --location 'http://localhost:8080/api/bets' \
 	--header 'Content-Type: application/json' \
 	--data '{
@@ -62,11 +64,14 @@ mvn spring-boot:run
 		  "driverId": "22",
 		  "amount": 10.0
 		}'
+```
 	
 3. Submit Event Outcome (POST /api/event-outcome)
+```
 	curl --location 'http://localhost:8080/api/event-outcome' \
 	--header 'Content-Type: application/json' \
 	--data '{
 		  "sessionId": "9963",
 		  "winningDriverId": "22"
 		}'
+```
